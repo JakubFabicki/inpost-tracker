@@ -1,0 +1,11 @@
+.container{
+    height: 35vh;
+    padding-top: calc(5vw + 12px);
+}
+
+#map{
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 100%;
+}

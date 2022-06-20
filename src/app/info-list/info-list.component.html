@@ -1,0 +1,34 @@
+<div class="container" *ngIf="responseStatus">
+    <header>
+        Status przesyłki
+    </header>
+    <ul>
+        <li *ngFor="let status of statusy">
+            <p>{{status.status}}</p>
+            {{status.datetime | date: 'c MMMM y, H:mm ' }}
+        </li>
+    </ul>
+</div>
+<div class="container grey" *ngIf="responseStatus">
+    <header>
+        Informacje o przesyłce
+    </header>
+    <ul >
+        <li>
+            <p>Nazwa paczkomatu</p>
+            {{information.name}}
+        </li>
+        <li>
+            <p>Adres paczkomatu</p>
+            {{information.address.line1}} <br> {{information.address.line2}}
+        </li>
+        <li>
+            <p>Wskazówki dojazdu</p>
+            {{information.location_description}}
+        </li>
+        <li>
+            <p>Godziny dostępności paczkomatu</p>
+            {{information.opening_hours}}
+        </li>
+    </ul>
+</div>

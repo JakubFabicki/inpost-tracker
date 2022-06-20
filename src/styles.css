@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    padding: 5vw;
+    padding-bottom: calc(5vw + 12px);
+    background-color: #FFCB04;
+}
+
+
+.grey{
+    background-color: #3c3c3c;
+    color: #fff;
+}
