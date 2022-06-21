@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Address, CustomAttributes, TargetMachineDetail, TrackingDetail } from '../services/paczkomat.service';
+import { Address, CustomAttributes, TargetMachineDetail, TrackingDetail } from '../models/Paczka';
 import { PaczkomatService } from '../services/paczkomat.service';
 
 @Component({
@@ -9,6 +9,16 @@ import { PaczkomatService } from '../services/paczkomat.service';
 })
 export class InfoListComponent implements OnInit {
   
+  statusArray = {
+    delivered: 'Odebrana',
+    ready_to_pickup: 'Umieszczono w Paczkomacie',
+    out_for_delivery: 'Przekazano do doręczenia',
+    adopted_at_source_branch: 'Przyjęta w oddziale InPost',
+    sent_from_source_branch: 'W trasie',
+    collected_from_sender: 'Odebrana od nadawcy',
+    confirmed: 'Przygotowana przez nadawcę'
+  };
+
   responseStatus: boolean;
   statusy: TrackingDetail[];
   information: TargetMachineDetail;
@@ -22,5 +32,4 @@ export class InfoListComponent implements OnInit {
       this.statusy = result.tracking_details;
     })
   }
-
 }

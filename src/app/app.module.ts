@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { LOCALE_ID } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
@@ -19,7 +20,10 @@ import { InfoListComponent } from './info-list/info-list.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [PaczkomatService],
+  providers: [
+    PaczkomatService,
+    {provide: LOCALE_ID, useValue: 'en-US' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

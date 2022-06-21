@@ -4,8 +4,8 @@
     </header>
     <ul>
         <li *ngFor="let status of statusy">
-            <p>{{status.status}}</p>
-            {{status.datetime | date: 'c MMMM y, H:mm ' }}
+            <p>{{ statusArray[status.status] }}</p>            
+            {{ status.datetime | date: 'c MMMM y, H:mm ' }}
         </li>
     </ul>
 </div>

@@ -1,7 +1,8 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
-import { Localization, PaczkomatService } from '../services/paczkomat.service';
+import { PaczkomatService } from '../services/paczkomat.service';
+import { Localization } from '../models/Paczka';
 
 @Component({
   selector: 'app-map',
